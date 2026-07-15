@@ -1,0 +1,32 @@
+# Personal CV data
+cv-data/profile.json
+cv-data/experiences/*.json
+cv-data/projects/*.json
+cv-data/links/repo-links.json
+cv-data/source-documents/
+
+# Keep bootstrap templates if present
+!cv-data/experiences/_template.json
+!cv-data/projects/_template.json
+
+# Imported job targets and generated CV outputs
+job-targets/*
+!job-targets/.gitkeep
+generated-cvs/*
+!generated-cvs/.gitkeep
+
+# Local analysis artifacts and scratch files
+repo-analysis-results/
+temp/
+tmp/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
