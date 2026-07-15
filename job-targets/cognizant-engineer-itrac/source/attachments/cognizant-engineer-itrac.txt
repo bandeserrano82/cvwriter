@@ -1,0 +1,45 @@
+At Cognizant
+
+Job Summary
+
+We are seeking a Full Stack Developer with strong experience building modern web applications dashboards and interactive user interfaces. The ideal candidate will have hands-on experience developing responsive frontend experiences, integrating with APIs and data services, and delivering scalable applications that support analytics, reporting, and operational workflows.
+
+Responsibilities
+
+Job Title Engineer ITRAC
+
+Key Responsibilities
+
+Design, develop and maintain responsive web applications and dashboards.
+Build interactive UI components using modern JavaScript frameworks such as React.
+Develop and integrate backend services, REST APIs and data access layers.
+Create data visualizations, charts, filters and reporting views for business users.
+Collaborate with product owners, UX designers and backend/data teams to deliver user-friendly solutions.
+Optimize application performance, usability and reliability.
+Implement authentication, authorization and secure data handling practices.
+Write clean, maintainable and well-documented code.
+Support testing, debugging, deployment and production issue resolution.
+Participate in code reviews and contribute to development best practices.
+
+Required Qualifications
+
+3+ years of full stack development experience.
+Strong frontend development skills using JavaScript/TypeScript, HTML and CSS.
+Experience with modern UI frameworks such as React.
+Experience building dashboards, reporting tools or data-driven web interfaces.
+Backend development experience using Node.js, Python, Java or .NET.
+Experience integrating with REST APIs and relational or NoSQL databases.
+Familiarity with Git, CI/CD workflows and Agile development practices.
+Strong problem-solving skills and attention to user experience.
+
+Preferred Qualifications
+
+Experience with visualization libraries such as Power BI.
+Experience with cloud platforms such as Azure.
+Knowledge of UI/UX design principles and accessibility best practices.
+Experience with containerized applications using Docker.
+Familiarity with analytics data platforms or enterprise reporting environments.
+
+About Cognizant
+
+Cognizant is an AI Builder and technology services provider, bridging the gap between AI investment and enterprise value by building full-stack AI solutions for clients.

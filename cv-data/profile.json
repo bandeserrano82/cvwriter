@@ -1,0 +1,24 @@
+{
+  "name": "Jose Bande Serrano",
+  "headline": "Full-stack Software Engineer",
+  "summary": "Full-stack Software Engineer with 12+ years of experience designing and delivering cloud-native, data-driven, and AI-powered applications across frontend, backend, data, and automation systems.",
+  "location": "New York, NY",
+  "email": "bandeserrano@gmail.com",
+  "phone": "(347) 918-6512",
+  "links": {
+    "linkedin": "linkedin.com/in/bandeserrano",
+    "github": "",
+    "portfolio": "https://invo.gnosiscraft.com"
+  },
+  "education": [
+    {
+      "degree": "Bachelor's Degree",
+      "major": "Engineer in Electronics",
+      "institution": "Ciudad Universitaria Jose A. Echeverria (CUJAE)",
+      "location": "Havana, Cuba",
+      "start_year": "2004",
+      "end_year": "2009"
+    }
+  ],
+  "updated_at": "2026-07-09T14:49:00+00:00"
+}

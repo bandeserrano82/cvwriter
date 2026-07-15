@@ -1,0 +1,25 @@
+{
+  "must_have": [
+    "ai",
+    "apis",
+    "azure",
+    "ci/cd",
+    "css",
+    "docker",
+    "fastapi",
+    "html",
+    "java",
+    "microservice",
+    "node.js",
+    "openai",
+    "redis",
+    "sql",
+    "typescript"
+  ],
+  "nice_to_have": [],
+  "matched_experiences": [],
+  "matched_projects": [],
+  "matched_repos": [],
+  "gaps": [],
+  "updated_at": "2026-07-09T14:28:42+00:00"
+}

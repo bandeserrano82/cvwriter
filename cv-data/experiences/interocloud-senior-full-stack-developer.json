@@ -1,0 +1,43 @@
+{
+  "id": "interocloud-senior-full-stack-developer",
+  "company": "InteroCloud",
+  "title": "Senior Full-Stack Developer",
+  "employment_type": "",
+  "start_date": "2022-11",
+  "end_date": "2023-11",
+  "location": "Remote",
+  "summary": "Contributed to a medical-practice CRM with Next.js SSR, Playwright automation, SEO improvements, and Python migration tooling.",
+  "highlights": [
+    "Contributed to a medical-practice CRM built with Next.js SSR and TypeScript.",
+    "Implemented test automation with Playwright and added SEO-friendly pages.",
+    "Introduced Google Tag Manager for reporting and event tracking.",
+    "Built a document template generator that reduced support needs and saved internal development time.",
+    "Authored Python migration scripts to streamline data updates and maintain system reliability."
+  ],
+  "skills_override": [],
+  "manual_skills": [
+    "Linux"
+  ],
+  "manual_tools": [
+    "Linux"
+  ],
+  "manual_highlights": [
+    "Worked in Linux environments while developing and supporting production healthcare software systems."
+  ],
+  "manual_notes": [
+    {
+      "note": "User confirmed Linux experience at InteroCloud.",
+      "source": "user-provided",
+      "added_at": "2026-07-08T16:34:00+00:00"
+    }
+  ],
+  "repo_links": [
+    "interocloud"
+  ],
+  "project_links": [],
+  "source": {
+    "cv_file": "cv-data/source-documents/jose-bande-serrano-resume-v6.txt",
+    "notes": "Parsed from JOSE BANDE SERRANO RESUME V6.pdf"
+  },
+  "updated_at": "2026-07-09T14:47:00+00:00"
+}

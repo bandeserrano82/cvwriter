@@ -1,0 +1,23 @@
+{
+  "id": "datys-computer-science-specialist",
+  "company": "DATYS",
+  "title": "Computer Science Specialist",
+  "employment_type": "",
+  "start_date": "2009-09",
+  "end_date": "2016-04",
+  "location": "",
+  "summary": "Worked on FPGA research, automation tooling, and distributed systems for fraud detection and identification platforms.",
+  "highlights": [
+    "Conducted research and built FPGA architectures for high-throughput network intrusion detection and published five peer-reviewed papers.",
+    "Developed Python tooling to auto-generate FPGA designs and speed development cycles.",
+    "Contributed to a nation-wide AFIS system and a telephone fraud detection system using distributed and parallel computing."
+  ],
+  "skills_override": [],
+  "repo_links": [],
+  "project_links": [],
+  "source": {
+    "cv_file": "cv-data/source-documents/jose-bande-serrano-resume-v6.txt",
+    "notes": "Parsed from JOSE BANDE SERRANO RESUME V6.pdf"
+  },
+  "updated_at": "2026-07-08T14:40:00+00:00"
+}

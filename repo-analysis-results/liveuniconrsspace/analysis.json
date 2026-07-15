@@ -1,0 +1,216 @@
+{
+  "repo": "D:\\work\\liveuniconrsSpace",
+  "repo_name": "liveuniconrsSpace",
+  "summary": {
+    "files_scanned": 8052,
+    "languages_detected": 15,
+    "frameworks_detected": 9,
+    "capabilities_detected": 5
+  },
+  "languages": [
+    {
+      "skill": "PHP",
+      "file_count": 1569
+    },
+    {
+      "skill": "JavaScript",
+      "file_count": 1104
+    },
+    {
+      "skill": "Vue",
+      "file_count": 463
+    },
+    {
+      "skill": "HTML",
+      "file_count": 157
+    },
+    {
+      "skill": "CSS",
+      "file_count": 136
+    },
+    {
+      "skill": "SCSS",
+      "file_count": 119
+    },
+    {
+      "skill": "Less",
+      "file_count": 97
+    },
+    {
+      "skill": "JSON",
+      "file_count": 47
+    },
+    {
+      "skill": "YAML",
+      "file_count": 14
+    },
+    {
+      "skill": "Shell",
+      "file_count": 7
+    },
+    {
+      "skill": "Docker",
+      "file_count": 6
+    },
+    {
+      "skill": "Sass",
+      "file_count": 2
+    },
+    {
+      "skill": "Python",
+      "file_count": 2
+    },
+    {
+      "skill": "Ruby",
+      "file_count": 1
+    },
+    {
+      "skill": "Go",
+      "file_count": 1
+    }
+  ],
+  "frameworks_tools": [
+    {
+      "skill": "Bootstrap",
+      "confidence": "high",
+      "evidence_count": 3,
+      "files": [
+        "admin_liveunicorns\\package.json",
+        "frontend\\performers_lu\\package.json",
+        "liveunicorns\\package.json"
+      ]
+    },
+    {
+      "skill": "Docker Compose",
+      "confidence": "medium",
+      "evidence_count": 2,
+      "files": [
+        "docker\\docker-compose.yaml"
+      ]
+    },
+    {
+      "skill": "ESLint",
+      "confidence": "high",
+      "evidence_count": 3,
+      "files": [
+        "frontend\\members_lu\\package.json",
+        "frontend\\performers_lu\\package.json",
+        "main_ds\\package.json"
+      ]
+    },
+    {
+      "skill": "Express",
+      "confidence": "low",
+      "evidence_count": 1,
+      "files": [
+        "ssr_renderer\\package.json"
+      ]
+    },
+    {
+      "skill": "Jest",
+      "confidence": "high",
+      "evidence_count": 3,
+      "files": [
+        "frontend\\members_lu\\package.json",
+        "frontend\\performers_lu\\package.json",
+        "test_automation_lu\\package.json"
+      ]
+    },
+    {
+      "skill": "Nuxt.js",
+      "confidence": "medium",
+      "evidence_count": 2,
+      "files": [
+        "frontend\\members_lu\\package.json",
+        "frontend\\performers_lu\\package.json"
+      ]
+    },
+    {
+      "skill": "Playwright",
+      "confidence": "low",
+      "evidence_count": 1,
+      "files": [
+        "test_automation_lu\\package.json"
+      ]
+    },
+    {
+      "skill": "Prettier",
+      "confidence": "high",
+      "evidence_count": 3,
+      "files": [
+        "frontend\\members_lu\\package.json",
+        "frontend\\performers_lu\\package.json",
+        "main_ds\\package.json"
+      ]
+    },
+    {
+      "skill": "Vue.js",
+      "confidence": "high",
+      "evidence_count": 4,
+      "files": [
+        "admin_liveunicorns\\package.json",
+        "frontend\\performers_lu\\package.json",
+        "liveunicorns\\package.json",
+        "main_ds\\package.json"
+      ]
+    }
+  ],
+  "engineering_capabilities": [
+    {
+      "skill": "Authentication",
+      "confidence": "high",
+      "evidence_count": 1418,
+      "files": [
+        "admin_liveunicorns\\app\\ChatSupportHistory.php",
+        "admin_liveunicorns\\app\\Http\\Controllers\\AdminsController.php",
+        "admin_liveunicorns\\app\\Http\\Controllers\\AnnouncementController.php",
+        "admin_liveunicorns\\app\\Http\\Controllers\\Auth\\ForgotPasswordController.php",
+        "admin_liveunicorns\\app\\Http\\Controllers\\Auth\\LoginController.php"
+      ]
+    },
+    {
+      "skill": "Containerization",
+      "confidence": "high",
+      "evidence_count": 39,
+      "files": [
+        "admin_liveunicorns\\Dockerfile",
+        "admin_liveunicorns\\public\\assets\\flot\\jquery.flot.js",
+        "admin_liveunicorns\\public\\assets\\flot\\jquery.flot.selection.js",
+        "admin_liveunicorns\\public\\assets\\jquery-file-upload\\server\\gae-python\\main.py",
+        "api_lu\\Dockerfile"
+      ]
+    },
+    {
+      "skill": "Database Design",
+      "confidence": "high",
+      "evidence_count": 1205,
+      "files": [
+        "admin_liveunicorns\\app\\Http\\Controllers\\ScheduledShowsController.php",
+        "admin_liveunicorns\\config\\app.php",
+        "admin_liveunicorns\\config\\database.php",
+        "admin_liveunicorns\\database\\migrations\\2014_10_12_000000_create_users_table.php",
+        "admin_liveunicorns\\database\\migrations\\2014_10_12_100000_create_password_resets_table.php"
+      ]
+    },
+    {
+      "skill": "REST APIs",
+      "confidence": "high",
+      "evidence_count": 7,
+      "files": [
+        "ssr_renderer\\renderer.js"
+      ]
+    },
+    {
+      "skill": "Testing",
+      "confidence": "high",
+      "evidence_count": 2271,
+      "files": [
+        "admin_liveunicorns\\public\\assets\\bootstrap-toggle-buttons\\static\\js\\jquery.min.js",
+        "admin_liveunicorns\\public\\assets\\bootstrap-toggle-buttons\\static\\js\\jquery.toggle.buttons.js",
+        "admin_liveunicorns\\public\\assets\\bootstrap-tree\\bootstrap\\js\\bootstrap.js",
+        "admin_liveunicorns\\public\\assets\\bootstrap-tree\\bootstrap\\js\\bootstrap.min.js",
+        "admin_liveunicorns\\public\\assets\\bootstrap-wizard\\bootstrap\\js\\bootstrap.js"
+      ]
+    }
+  ]
+}

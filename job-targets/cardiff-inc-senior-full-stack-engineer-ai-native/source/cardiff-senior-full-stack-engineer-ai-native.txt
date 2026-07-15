@@ -1,0 +1,35 @@
+Senior Full-Stack Engineer (AI-Native)
+Cardiff, Inc.
+
+Cardiff, Inc. Remote (US)
+
+Reports to Managing Partner Works directly with Lead AI Architect
+
+About Cardiff
+Cardiff is an AI-first, remote-first alternative lender. We've funded over $10B to small businesses and have been named "America's Favorite Small Business Lender" two years running. ~100 people across 12+ states and Mexico. Stack: Salesforce, Snowflake, Google Workspace, Zoom, Rippling.
+We're not bolting AI onto a legacy company. We're rebuilding the company around it: our own API, an AI-native gateway, ML-powered risk decisioning, and agentic SMS/email/voice outreach, all backed by a continuously learning data and intelligence layer.
+
+The Role
+We're hiring a Senior Full-Stack Engineer who is genuinely AI-native. Someone who treats Claude Code, Codex, Cursor, and the modern tooling stack as a force multiplier and ships at velocities that weren't possible 18 months ago.
+This is not a role for someone who uses AI tools to assist their existing workflow. It's for someone who has rebuilt their workflow around these tools and ships full features in days where traditional teams ship in weeks.
+You'll own execution end-to-end on a portfolio of high-leverage projects, working directly with our Lead AI Architect on system design and architecture across Cardiff's AI platform.
+
+What you'll do
+
+Take prototypes to production in days, not weeks
+Partner closely with our Lead AI Architect on architecture, system design, and the evolution of Cardiff's AI platform
+Build and ship AI agents touching real customers (SMS, email, voice) with measurable business outcomes: lead nurturing, transactions, retention
+Integrate across Salesforce, Snowflake, Gmail, Zoom, Slack, and internal services
+Own the full lifecycle: backend, frontend, deployment, monitoring, iteration
+Work directly with operations, sales, underwriting, and marketing leaders. Translate business needs into shipped product the same week
+Iterate relentlessly in production. We'd rather ship a v1 today and refine it Monday than ship a perfect v1 next month
+
+Who you are
+
+You've personally shipped production features using Claude Code, Codex, Cursor, or equivalent as your primary development mode, not a side experiment
+You can point to recent work (last 0-6 months) where AI tooling let you ship something a traditional engineer would have taken 3-5x longer to deliver
+Strong fundamentals. You know when the AI is wrong, you read what it generates, you understand the systems you're building on
+Comfortable across the stack: Python, modern JS/TS, SQL, REST/GraphQL, cloud deployment
+Bias toward shipping. A rough v1 in production beats a polished v1 in staging
+Direct communicator. When something's blocked, you say so the same day
+You don't need a spec to start. A one-line goal and a 15-minute call with a business stakeholder is enough to come back with a working prototype

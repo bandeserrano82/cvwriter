@@ -1,0 +1,64 @@
+Starr Insurance Companies
+
+Job Title: Technical Delivery Lead - Full Stack Engineering (P&C Insurance)
+
+Location: New York, NY / Atlanta, GA
+
+Overview:
+
+We are seeking an accomplished and hands-on Technical Delivery Lead with a robust background in full-stack engineering and product delivery to drive the buildout of innovative insurance products and solutions.
+
+The ideal candidate brings deep expertise in designing, architecting, and shipping modern, end-to-end applications and services, ideally within Property & Casualty (P&C) Insurance.
+
+You will serve as a technical leader and delivery owner, responsible for managing all aspects of delivery - from requirements gathering through architecture, implementation, QA, and deployment - while building and guiding high-performing, multidisciplinary teams. This is a unique opportunity to lead from the front, shaping solution architecture as well as day-to-day engineering, with a sharp focus on scalability, flexibility, and reusability in an evolving P&C sector.
+
+Key Responsibilities:
+
+End-to-End Solution Delivery: Own the full product and platform delivery lifecycle for P&C insurance applications - overseeing ideation, architecture, engineering, quality assurance, release, and ongoing support.
+Technical Strategy & Solution Architecture: Develop and enforce architectural decisions and software engineering best practices that support modular, scalable, reusable, and secure solutions, in alignment with business and regulatory requirements.
+Hands-On Technical Leadership: Set the standard for technical excellence by actively engaging in design, hands-on development, technical problem-solving, and rigorous code reviews - leading by example across functional and non-functional requirements (performance, reliability, security).
+Cross-Team Leadership & Collaboration: Lead, motivate, and mentor high-impact engineering, architecture, and QA teams; drive cross-functional collaboration to deliver complex initiatives on time and on budget.
+Stakeholder Engagement: Partner with product owners, solution architects, business leads, and engineering peers to elaborate business needs, refine requirements, and align solution approaches with strategic technology blueprints and objectives.
+Delivery Planning & Execution: Direct project planning, estimation, resource allocation, sprint/release tracking, and status communications - ensuring transparency and meeting key delivery milestones.
+Continuous Improvement & DevOps: Champion best-in-class engineering practices, including CI/CD, test automation, code quality, and agile methodologies.
+Risk Management & Issue Resolution: Proactively identify delivery risks and impediments; develop mitigation strategies and adapt scope/priorities to achieve successful outcomes.
+Domain Leadership: Apply deep P&C insurance sector knowledge to ensure delivered solutions meet industry standards, regulatory constraints, and the unique needs of underwriting, claims, billing, or insurance operations.
+
+Qualifications:
+
+Bachelor's or Master's degree in Computer Science, Engineering, or a related technical discipline.
+10+ years of progressive software engineering experience, with hands-on full-stack development and delivery leadership at enterprise scale.
+Demonstrated success as a Technical Lead or Delivery Lead managing multidisciplinary engineering teams, delivering complex, end-to-end systems or platforms.
+Deep expertise in modern engineering stacks, including:
+
+Back-end: .NET, Node.js, or equivalent enterprise-grade frameworks
+Front-end: Angular, React, or Vue.js
+Cloud: AWS, Azure, or GCP-based architectures and deployments
+API: RESTful, GraphQL, and microservices patterns
+Data: Relational (SQL Server, PostgreSQL, etc.) and NoSQL databases
+Strong practical background in designing and implementing application, solution, and integration architectures.
+Proven ability to translate business/insurance requirements into scalable software solutions, with significant experience in P&C insurance (policy, claims, billing, underwriting workflows).
+Hands-on experience with DevOps culture, automation (CI/CD), infrastructure-as-code, test-driven development, automated QA, and modern delivery pipelines.
+Outstanding communication, executive presence, and stakeholder management skills - adept at bridging technology and business.
+Strong mentoring and team development abilities, with a commitment to building and nurturing high-performing, diverse teams.
+Track record of delivering on commitments in a fast-paced, complex environment.
+
+Highly Preferred:
+
+Experience delivering large-scale digital transformation programs within insurance or broader financial services.
+Familiarity with Insurtech platforms, digital ecosystems, or core P&C insurance platforms (Guidewire, Duck Creek, Majesco, etc.).
+Experience implementing Agile at scale (Scrum, Kanban, SAFe) and orchestrating multi-team (or distributed/offshore) delivery models.
+Industry certifications (e.g., AWS, Azure, GCP Architect,) a plus.
+
+Pay: $140.00 - $180.00 per year
+
+Benefits:
+
+401(k)
+401(k) matching
+Dental insurance
+Health insurance
+Paid time off
+Tuition reimbursement
+Vision insurance
+Work Location: In person

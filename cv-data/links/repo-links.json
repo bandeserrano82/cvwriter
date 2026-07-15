@@ -1,0 +1,63 @@
+{
+  "updated_at": "2026-07-08T14:46:11+00:00",
+  "repos": {
+    "email-services": {
+      "repo_name": "email-services",
+      "repo_path": "D:\\work\\01-NgosisCraft\\enerex\\email-services",
+      "analysis_dir": "repo-analysis-results/email-services",
+      "experience_ids": [
+        "enerex-ai-development-consultor"
+      ],
+      "project_ids": [],
+      "notes": "Mapped from resume entry for Enerex AI Development Consultor."
+    },
+    "liveuniconrsspace": {
+      "repo_name": "liveuniconrsSpace",
+      "repo_path": "D:\\work\\liveuniconrsSpace",
+      "analysis_dir": "repo-analysis-results/liveuniconrsspace",
+      "experience_ids": [
+        "broadcasting-platforms-senior-frontend-engineer-team-lead"
+      ],
+      "project_ids": [],
+      "notes": "Mapped from Broadcasting Platforms experience."
+    },
+    "resume-repo-skills": {
+      "repo_name": "resume-repo-skills",
+      "repo_path": "C:\\Users\\Bande\\OneDrive\\Documents\\cvWriter\\resume-repo-skills",
+      "analysis_dir": "repo-analysis-results/resume-repo-skills",
+      "experience_ids": [],
+      "project_ids": [],
+      "notes": "Internal helper skill for this workspace."
+    },
+    "enerex": {
+      "repo_name": "Enerex",
+      "repo_path": "C:\\Users\\Bande\\Enerex",
+      "analysis_dir": "repo-analysis-results/enerex",
+      "experience_ids": [
+        "enerex-ai-development-consultor"
+      ],
+      "project_ids": [],
+      "notes": "Mapped from user-provided Enerex repo at C:\\Users\\Bande\\Enerex."
+    },
+    "interocloud": {
+      "repo_name": "interocloud",
+      "repo_path": "D:\\work\\encodeExperts\\projects\\interocloud",
+      "analysis_dir": "repo-analysis-results/interocloud",
+      "experience_ids": [
+        "interocloud-senior-full-stack-developer"
+      ],
+      "project_ids": [],
+      "notes": "Mapped from user-provided InteroCloud repo."
+    },
+    "mcp-server": {
+      "repo_name": "mcp-server",
+      "repo_path": "D:\\work\\01-NgosisCraft\\enerex\\mcp-server",
+      "analysis_dir": "repo-analysis-results/mcp-server",
+      "experience_ids": [
+        "enerex-ai-development-consultor"
+      ],
+      "project_ids": [],
+      "notes": "Mapped from user-provided Enerex MCP server repo. Report is noisy because the repository includes a checked-in environment directory."
+    }
+  }
+}

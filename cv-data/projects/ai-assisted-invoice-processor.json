@@ -1,0 +1,70 @@
+{
+  "id": "ai-assisted-invoice-processor",
+  "name": "AI Assisted Invoice Processor",
+  "type": "project",
+  "start_date": "",
+  "end_date": "",
+  "summary": "An application to help finance teams collect invoices, extract structured data, review exceptions, and move approved records into downstream reporting without juggling disconnected inboxes, sheets, and shared folders.",
+  "highlights": [
+    "Built for finance workflow automation around invoice collection, extraction, review, and downstream reporting.",
+    "Public project URL: https://invo.gnosiscraft.com"
+  ],
+  "skills_override": [],
+  "manual_skills": [
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "TanStack",
+    "Auth0",
+    "Node.js",
+    "Express",
+    "Prisma",
+    "SQL Server",
+    "Azure Functions",
+    "Azure",
+    "Azure DevOps",
+    "CI/CD",
+    "OpenAI"
+  ],
+  "manual_tools": [
+    "Lucide React",
+    "TanStack Table",
+    "Auth0",
+    "Node.js",
+    "Express.js",
+    "Prisma",
+    "SQL Server",
+    "Azure Functions",
+    "Azure",
+    "Azure DevOps",
+    "Nylas",
+    "Google Workspace",
+    "Codex",
+    "Mempalace",
+    "OpenAI"
+  ],
+  "manual_highlights": [
+    "Built the frontend with React.js, Next.js, Tailwind CSS, Lucide React, and TanStack to support real-time, data-driven invoice operations.",
+    "Implemented SSO authentication with Auth0.",
+    "Built the backend with Node.js, Express.js, and Prisma over SQL Server hosted in Azure.",
+    "Used Azure Functions for data processing and to run agents that analyze incoming invoices.",
+    "Integrated Nylas and Google services to enable controlled access to user email inboxes for invoice ingestion.",
+    "Deployed the system in Azure with CI/CD through Azure DevOps.",
+    "Used Codex and Mempalace to support project management and software delivery.",
+    "Implemented AI-powered invoice analysis using OpenAI."
+  ],
+  "manual_notes": [
+    {
+      "note": "Frontend stack: React.js/Next.js, Tailwind CSS, Lucide React, TanStack, Auth0. Backend stack: Node.js, Express.js, Prisma, SQL Server in Azure, Azure Functions for data processing and invoice-analysis agents. Integrations: Nylas, Google app/email access. DevOps: Azure cloud and Azure DevOps CI/CD. Development tooling: Codex and Mempalace. AI: OpenAI.",
+      "source": "user-provided",
+      "added_at": "2026-07-09T14:15:00+00:00"
+    }
+  ],
+  "repo_links": [],
+  "experience_links": [],
+  "source": {
+    "cv_file": "cv-data/source-documents/jose-bande-serrano-resume-v6.txt",
+    "notes": "Parsed from JOSE BANDE SERRANO RESUME V6.pdf"
+  },
+  "updated_at": "2026-07-09T14:15:00+00:00"
+}

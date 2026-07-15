@@ -1,0 +1,30 @@
+{
+  "must_have": [
+    "ai",
+    "api",
+    "apis",
+    "architecture",
+    "aws",
+    "ci/cd",
+    "design patterns",
+    "distributed systems",
+    "docker",
+    "event-driven",
+    "gcp",
+    "kubernetes",
+    "microservices",
+    "node.js",
+    "operations",
+    "python",
+    "react",
+    "restful",
+    "sql",
+    "typescript"
+  ],
+  "nice_to_have": [],
+  "matched_experiences": [],
+  "matched_projects": [],
+  "matched_repos": [],
+  "gaps": [],
+  "updated_at": "2026-07-09T16:57:56+00:00"
+}

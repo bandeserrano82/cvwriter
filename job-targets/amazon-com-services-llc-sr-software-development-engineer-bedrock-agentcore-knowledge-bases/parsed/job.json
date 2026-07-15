@@ -1,0 +1,65 @@
+{
+  "id": "amazon-com-services-llc-sr-software-development-engineer-bedrock-agentcore-knowledge-bases",
+  "title": "Sr. Software Development Engineer, Bedrock AgentCore Knowledge Bases",
+  "company": "Amazon.com Services LLC",
+  "location": "",
+  "source_type": "file",
+  "source_path": "tmp\\amazon-bedrock-agentcore-knowledge-bases.txt",
+  "source_url": "",
+  "summary": "Sr. Software Development Engineer, Bedrock AgentCore Knowledge Bases\nAmazon.com Services LLC\nNew York, NY 10261\n\nFull job description\nInterested in high-scale distributed systems and Gen AI? Our team develops Amazon Bedrock Knowledge Bases, a fully managed service for end-to-end Retrieval Augmented Generation (RAG) workflow. Our team's mission is to make it easier for customers to build AI applications with contextual information from their enteprise data to deliver more relevant, accurate, and customized responses. We continuously develop new features to address real-world problems through research and innovation, such as 1/ integrating with Foundation Models (FM), agents, and data sources 2/ improving response quality by improving our existing pipeline and creating new pipelines 3/ intro",
+  "requirements": [
+    "Drive adoption of engineering best practices and operational excellence across the team",
+    "Solve complex technical problems with multiple risks and roadblocks, bringing clarity through simple, well-designed solutions",
+    "Mentor and coach multiple engineers, helping develop the next generation of technical talent",
+    "Effectively communicate technical designs to both technical and non-technical audiences",
+    "5+ years of non-internship professional software development experience",
+    "5+ years of programming with at least one software programming language experience",
+    "5+ years of leading design or architecture (design patterns, reliability and scaling) of new and existing systems experience",
+    "Experience as a mentor, tech lead or leading an engineering team",
+    "5+ years of full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations experience",
+    "Bachelor's degree in computer science or equivalent"
+  ],
+  "preferred_qualifications": [
+    "5+ years of full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations experience",
+    "Bachelor's degree in computer science or equivalent"
+  ],
+  "responsibilities": [
+    "Lead the design and implementation of distributed AI data pipelines and systems, providing system-wide architectural guidance",
+    "Balance speed of execution with architectural requirements, identifying one-way door decisions that require the right long-term solution",
+    "Drive adoption of engineering best practices and operational excellence across the team",
+    "Solve complex technical problems with multiple risks and roadblocks, bringing clarity through simple, well-designed solutions",
+    "Mentor and coach multiple engineers, helping develop the next generation of technical talent",
+    "Effectively communicate technical designs to both technical and non-technical audiences"
+  ],
+  "keywords": [
+    "ai",
+    "architecture",
+    "data pipelines",
+    "design patterns",
+    "distributed systems",
+    "foundation models",
+    "operational excellence",
+    "operations",
+    "rag",
+    "retrieval augmented generation",
+    "technical leadership",
+    "testing"
+  ],
+  "tech_stack": [
+    "ai",
+    "architecture",
+    "data pipelines",
+    "design patterns",
+    "distributed systems",
+    "foundation models",
+    "operational excellence",
+    "operations",
+    "rag",
+    "retrieval augmented generation",
+    "technical leadership",
+    "testing"
+  ],
+  "seniority": "",
+  "work_mode": "",
+  "updated_at": "2026-07-09T14:55:10+00:00"
+}

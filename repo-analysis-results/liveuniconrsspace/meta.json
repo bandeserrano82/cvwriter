@@ -1,0 +1,17 @@
+{
+  "repo_name": "liveuniconrsSpace",
+  "repo_slug": "liveuniconrsspace",
+  "repo_path": "D:\\work\\liveuniconrsSpace",
+  "analyzed_at": "2026-07-08T16:23:45+00:00",
+  "summary": {
+    "files_scanned": 8052,
+    "languages_detected": 15,
+    "frameworks_detected": 9,
+    "capabilities_detected": 5
+  },
+  "files": {
+    "analysis_json": "analysis.json",
+    "analysis_markdown": "analysis.md",
+    "meta_json": "meta.json"
+  }
+}

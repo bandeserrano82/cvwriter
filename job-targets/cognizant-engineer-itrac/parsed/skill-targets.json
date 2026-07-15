@@ -1,0 +1,26 @@
+{
+  "must_have": [
+    ".net",
+    "ai",
+    "apis",
+    "azure",
+    "ci/cd",
+    "css",
+    "docker",
+    "html",
+    "java",
+    "javascript",
+    "node.js",
+    "python",
+    "react",
+    "rest",
+    "testing",
+    "typescript"
+  ],
+  "nice_to_have": [],
+  "matched_experiences": [],
+  "matched_projects": [],
+  "matched_repos": [],
+  "gaps": [],
+  "updated_at": "2026-07-10T14:23:17+00:00"
+}

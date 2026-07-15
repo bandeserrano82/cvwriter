@@ -1,0 +1,75 @@
+{
+  "id": "first-due-senior-software-engineer",
+  "company": "First Due",
+  "title": "Senior Software Engineer",
+  "employment_type": "",
+  "start_date": "2017-07",
+  "end_date": "2019-11",
+  "location": "Remote",
+  "summary": "Built large-scale web crawlers and ETL pipelines with Python and event-driven backend systems.",
+  "highlights": [
+    "Developed dozens of Python web crawlers and ETL pipelines to process large datasets into PostgreSQL.",
+    "Implemented event-driven architecture with Django, Flask, RabbitMQ, and Scrapy for resilient extraction and scheduling.",
+    "Deployed Elasticsearch for fast search across large datasets."
+  ],
+  "skills_override": [],
+  "manual_skills": [
+    "Linux",
+    "Web Crawling",
+    "Web Scraping",
+    "System Architecture",
+    "Monitoring Systems",
+    "ETL",
+    "Database Design",
+    "Database Clustering",
+    "Database Partitioning"
+  ],
+  "manual_tools": [
+    "Linux",
+    "Python",
+    "Scrapy",
+    "Django",
+    "FastAPI",
+    "RabbitMQ",
+    "PostgreSQL"
+  ],
+  "manual_highlights": [
+    "Worked in Linux environments while building and operating Python-based data extraction and ETL systems.",
+    "Implemented tens of Python web crawlers with the Scrapy framework to extract critical company data from public websites.",
+    "Architected a system to manage and control web crawlers, centralizing execution control and operational monitoring in a single UI.",
+    "Built crawler orchestration and monitoring capabilities using Django, FastAPI, and RabbitMQ.",
+    "Improved control and accountability of company web-crawling operations through centralized management and visibility.",
+    "Implemented ETL pipelines to collect, transform, and store data from multiple sources.",
+    "Designed and maintained PostgreSQL databases supporting large-scale data collection workloads.",
+    "Implemented database clustering and partitioning strategies to improve fault tolerance and performance."
+  ],
+  "manual_notes": [
+    {
+      "note": "User confirmed Linux experience at First Due.",
+      "source": "user-provided",
+      "added_at": "2026-07-08T16:34:00+00:00"
+    },
+    {
+      "note": "Implemented tens of web crawlers in Python using the Scrapy framework to scrape critical data for the company from public websites.",
+      "source": "user-provided",
+      "added_at": "2026-07-09T04:00:00+00:00"
+    },
+    {
+      "note": "Architected a system to manage and control web crawlers, centralizing crawler execution and monitoring into a single UI using Django, FastAPI, and RabbitMQ, improving control and accountability of web-crawling activity.",
+      "source": "user-provided",
+      "added_at": "2026-07-09T04:08:00+00:00"
+    },
+    {
+      "note": "Implemented ETL pipelines to collect, transform, and store data from different sources; designed and maintained PostgreSQL databases; and implemented database clustering and partitioning for fault tolerance and performance improvement.",
+      "source": "user-provided",
+      "added_at": "2026-07-09T04:14:00+00:00"
+    }
+  ],
+  "repo_links": [],
+  "project_links": [],
+  "source": {
+    "cv_file": "cv-data/source-documents/jose-bande-serrano-resume-v6.txt",
+    "notes": "Parsed from JOSE BANDE SERRANO RESUME V6.pdf"
+  },
+  "updated_at": "2026-07-09T14:47:00+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "must_have": [
+    ".net",
+    "ai",
+    "api",
+    "architecture",
+    "aws",
+    "c#",
+    "ci/cd",
+    "docker",
+    "integration testing",
+    "kubernetes",
+    "node.js",
+    "react",
+    "restful",
+    "testing",
+    "typescript",
+    "unit testing"
+  ],
+  "nice_to_have": [],
+  "matched_experiences": [],
+  "matched_projects": [],
+  "matched_repos": [],
+  "gaps": [],
+  "updated_at": "2026-07-10T12:51:11+00:00"
+}

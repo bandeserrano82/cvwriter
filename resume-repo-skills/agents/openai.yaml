@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Repo Skills"
+  short_description: "Infer resume skills from code repos"
+  default_prompt: "Use $resume-repo-skills to analyze this repository and list the skills it demonstrates."

@@ -1,0 +1,17 @@
+{
+  "repo_name": "interocloud",
+  "repo_slug": "interocloud",
+  "repo_path": "D:\\work\\encodeExperts\\projects\\interocloud",
+  "analyzed_at": "2026-07-08T16:10:40+00:00",
+  "summary": {
+    "files_scanned": 1108,
+    "languages_detected": 12,
+    "frameworks_detected": 9,
+    "capabilities_detected": 5
+  },
+  "files": {
+    "analysis_json": "analysis.json",
+    "analysis_markdown": "analysis.md",
+    "meta_json": "meta.json"
+  }
+}

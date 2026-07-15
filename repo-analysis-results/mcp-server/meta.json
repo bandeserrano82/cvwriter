@@ -1,0 +1,17 @@
+{
+  "repo_name": "mcp-server",
+  "repo_slug": "mcp-server",
+  "repo_path": "D:\\work\\01-NgosisCraft\\enerex\\mcp-server",
+  "analyzed_at": "2026-07-08T16:10:39+00:00",
+  "summary": {
+    "files_scanned": 91,
+    "languages_detected": 4,
+    "frameworks_detected": 0,
+    "capabilities_detected": 3
+  },
+  "files": {
+    "analysis_json": "analysis.json",
+    "analysis_markdown": "analysis.md",
+    "meta_json": "meta.json"
+  }
+}

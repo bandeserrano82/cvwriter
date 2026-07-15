@@ -1,0 +1,29 @@
+{
+  "must_have": [
+    ".net",
+    "angular",
+    "api",
+    "architecture",
+    "aws",
+    "azure",
+    "ci/cd",
+    "gcp",
+    "graphql",
+    "mentoring",
+    "microservices",
+    "node.js",
+    "operations",
+    "postgresql",
+    "react",
+    "restful",
+    "sql",
+    "technical leadership",
+    "vue.js"
+  ],
+  "nice_to_have": [],
+  "matched_experiences": [],
+  "matched_projects": [],
+  "matched_repos": [],
+  "gaps": [],
+  "updated_at": "2026-07-09T16:49:45+00:00"
+}

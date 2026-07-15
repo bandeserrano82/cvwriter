@@ -1,0 +1,32 @@
+{
+  "must_have": [
+    "ai",
+    "angular",
+    "api",
+    "apis",
+    "aws",
+    "azure",
+    "ci/cd",
+    "docker",
+    "end-to-end testing",
+    "google cloud platform",
+    "java",
+    "kafka",
+    "kubernetes",
+    "linux",
+    "microservice",
+    "microservices",
+    "mysql",
+    "rest",
+    "restful",
+    "spring",
+    "spring boot",
+    "sql"
+  ],
+  "nice_to_have": [],
+  "matched_experiences": [],
+  "matched_projects": [],
+  "matched_repos": [],
+  "gaps": [],
+  "updated_at": "2026-07-08T16:34:05+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "repo_name": "email-services",
+  "repo_slug": "email-services",
+  "repo_path": "D:\\work\\01-NgosisCraft\\enerex\\email-services",
+  "analyzed_at": "2026-07-08T14:06:51+00:00",
+  "summary": {
+    "files_scanned": 233,
+    "languages_detected": 5,
+    "frameworks_detected": 3,
+    "capabilities_detected": 5
+  },
+  "files": {
+    "analysis_json": "analysis.json",
+    "analysis_markdown": "analysis.md",
+    "meta_json": "meta.json"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "icapital-full-stack-engineer-associate",
+  "title": "Full Stack Engineer - Associate",
+  "company": "iCapital",
+  "location": "",
+  "source_type": "file",
+  "source_path": "tmp\\icapital-full-stack-engineer-associate.txt",
+  "source_url": "",
+  "summary": "Full Stack Engineer - Associate\niCapital\nNew York, New York, United States\n\nAbout the Role\n\niCapital is seeking an Associate Full Stack Engineer with an initial emphasis on frontend development to join the Post-Investments Technology team. This individual will work closely with multiple Engineering teams to build and evolve a TypeScript-based microservice frontend that integrates with Scala and Ruby on Rails backend systems. While the focus will start on the frontend, the role is expected to contribute across the stack over time.\n\nResponsibilities\n\nDesign, develop, and maintain frontend applications using TypeScript, with a strong focus on usability, performance, and upkeep.\nCollaborate with multiple Backend teams working in Scala and Ruby on Rails to integrate frontend services with distr",
+  "requirements": [
+    "Participate in code reviews, architectural discussions, and continuous improvement of engineering practices.",
+    "Support and enhance critical, client-facing platforms and workflows."
+  ],
+  "preferred_qualifications": [
+    "We believe the best ideas and innovation happen when we are together. Employees in this role will work in the office Monday-Thursday, with the flexibility to work remotely on Friday."
+  ],
+  "responsibilities": [
+    "Design, develop, and maintain frontend applications using TypeScript, with a strong focus on usability, performance, and upkeep.",
+    "Collaborate with multiple Backend teams working in Scala and Ruby on Rails to integrate frontend services with distributed microservice architectures.",
+    "Contribute to API design and backend development as needed to support end-to-end feature delivery.",
+    "Partner with Product Managers, Designers, and other Engineering teams to translate business requirements into scalable technical solutions.",
+    "Participate in code reviews, architectural discussions, and continuous improvement of engineering practices.",
+    "Support and enhance critical, client-facing platforms and workflows."
+  ],
+  "keywords": [
+    "api",
+    "architecture",
+    "microservice",
+    "microservices",
+    "rails",
+    "ruby",
+    "ruby on rails",
+    "typescript"
+  ],
+  "tech_stack": [
+    "api",
+    "architecture",
+    "microservice",
+    "microservices",
+    "rails",
+    "ruby",
+    "ruby on rails",
+    "typescript"
+  ],
+  "seniority": "",
+  "work_mode": "",
+  "updated_at": "2026-07-09T16:31:27+00:00"
+}

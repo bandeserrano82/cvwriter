@@ -1,0 +1,66 @@
+{
+  "id": "liberty-power-dotnet-sql-consultant",
+  "company": "Liberty Power",
+  "title": ".NET/SQL Consultant",
+  "employment_type": "Consulting",
+  "start_date": "2016-05",
+  "end_date": "2017-06",
+  "location": "Remote",
+  "summary": "Modernized legacy .NET applications and improved database quality and performance with SQL work.",
+  "highlights": [
+    "Migrated legacy VB/ASP.NET applications to ASP.NET with C#, Razor, and Entity Framework.",
+    "Authored SQL stored procedures and data-fix scripts to improve data quality and performance."
+  ],
+  "skills_override": [],
+  "manual_skills": [
+    ".NET",
+    "ASP.NET",
+    "C#",
+    "SQL",
+    "Entity Framework",
+    "Razor",
+    "Visual Basic",
+    "Application Modernization",
+    "Data Consistency",
+    "Stored Procedures"
+  ],
+  "manual_tools": [
+    ".NET",
+    "ASP.NET",
+    "C#",
+    "SQL Server",
+    "Entity Framework",
+    "Visual Basic",
+    "SQL"
+  ],
+  "manual_highlights": [
+    "Migrated projects from Visual Basic to ASP.NET as part of legacy application modernization work.",
+    "Performed extensive database data consistency reviews and corrections across business-critical datasets.",
+    "Implemented and ran SQL queries to investigate, validate, and repair data issues.",
+    "Implemented numerous stored procedures to support application behavior and database operations."
+  ],
+  "manual_notes": [
+    {
+      "note": "Normalized structured skills from existing Liberty Power experience highlights: ASP.NET, C#, Razor, Entity Framework, and SQL work.",
+      "source": "existing-experience-data",
+      "added_at": "2026-07-08T15:33:00+00:00"
+    },
+    {
+      "note": "Migrated projects from Visual Basic to ASP.NET.",
+      "source": "user-provided",
+      "added_at": "2026-07-09T04:22:00+00:00"
+    },
+    {
+      "note": "Performed extensive database data consistency revisions, implemented and executed SQL queries, and implemented many stored procedures.",
+      "source": "user-provided",
+      "added_at": "2026-07-09T04:30:00+00:00"
+    }
+  ],
+  "repo_links": [],
+  "project_links": [],
+  "source": {
+    "cv_file": "cv-data/source-documents/jose-bande-serrano-resume-v6.txt",
+    "notes": "Parsed from JOSE BANDE SERRANO RESUME V6.pdf"
+  },
+  "updated_at": "2026-07-09T14:47:00+00:00"
+}

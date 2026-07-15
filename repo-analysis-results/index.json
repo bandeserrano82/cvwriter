@@ -1,0 +1,108 @@
+{
+  "updated_at": "2026-07-08T16:23:45+00:00",
+  "results_root": "C:\\Users\\Bande\\OneDrive\\Documents\\cvWriter\\repo-analysis-results",
+  "repos": [
+    {
+      "repo_name": "email-services",
+      "repo_slug": "email-services",
+      "repo_path": "D:\\work\\01-NgosisCraft\\enerex\\email-services",
+      "analyzed_at": "2026-07-08T14:06:51+00:00",
+      "summary": {
+        "files_scanned": 233,
+        "languages_detected": 5,
+        "frameworks_detected": 3,
+        "capabilities_detected": 5
+      },
+      "files": {
+        "analysis_json": "analysis.json",
+        "analysis_markdown": "analysis.md",
+        "meta_json": "meta.json"
+      }
+    },
+    {
+      "repo_name": "Enerex",
+      "repo_slug": "enerex",
+      "repo_path": "C:\\Users\\Bande\\Enerex",
+      "analyzed_at": "2026-07-08T14:45:51+00:00",
+      "summary": {
+        "files_scanned": 254,
+        "languages_detected": 7,
+        "frameworks_detected": 7,
+        "capabilities_detected": 2
+      },
+      "files": {
+        "analysis_json": "analysis.json",
+        "analysis_markdown": "analysis.md",
+        "meta_json": "meta.json"
+      }
+    },
+    {
+      "repo_name": "interocloud",
+      "repo_slug": "interocloud",
+      "repo_path": "D:\\work\\encodeExperts\\projects\\interocloud",
+      "analyzed_at": "2026-07-08T16:10:40+00:00",
+      "summary": {
+        "files_scanned": 1108,
+        "languages_detected": 12,
+        "frameworks_detected": 9,
+        "capabilities_detected": 5
+      },
+      "files": {
+        "analysis_json": "analysis.json",
+        "analysis_markdown": "analysis.md",
+        "meta_json": "meta.json"
+      }
+    },
+    {
+      "repo_name": "liveuniconrsSpace",
+      "repo_slug": "liveuniconrsspace",
+      "repo_path": "D:\\work\\liveuniconrsSpace",
+      "analyzed_at": "2026-07-08T16:23:45+00:00",
+      "summary": {
+        "files_scanned": 8052,
+        "languages_detected": 15,
+        "frameworks_detected": 9,
+        "capabilities_detected": 5
+      },
+      "files": {
+        "analysis_json": "analysis.json",
+        "analysis_markdown": "analysis.md",
+        "meta_json": "meta.json"
+      }
+    },
+    {
+      "repo_name": "mcp-server",
+      "repo_slug": "mcp-server",
+      "repo_path": "D:\\work\\01-NgosisCraft\\enerex\\mcp-server",
+      "analyzed_at": "2026-07-08T16:10:39+00:00",
+      "summary": {
+        "files_scanned": 91,
+        "languages_detected": 4,
+        "frameworks_detected": 0,
+        "capabilities_detected": 3
+      },
+      "files": {
+        "analysis_json": "analysis.json",
+        "analysis_markdown": "analysis.md",
+        "meta_json": "meta.json"
+      }
+    },
+    {
+      "repo_name": "resume-repo-skills",
+      "repo_slug": "resume-repo-skills",
+      "repo_path": "C:\\Users\\Bande\\OneDrive\\Documents\\cvWriter\\resume-repo-skills",
+      "analyzed_at": "2026-07-08T14:05:26+00:00",
+      "summary": {
+        "files_scanned": 3,
+        "languages_detected": 2,
+        "frameworks_detected": 2,
+        "capabilities_detected": 5
+      },
+      "files": {
+        "analysis_json": "analysis.json",
+        "analysis_markdown": "analysis.md",
+        "meta_json": "meta.json"
+      }
+    }
+  ]
+}

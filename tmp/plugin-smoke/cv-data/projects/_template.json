@@ -1,0 +1,21 @@
+{
+  "id": "example-project-id",
+  "name": "",
+  "type": "project",
+  "start_date": "",
+  "end_date": "",
+  "summary": "",
+  "highlights": [],
+  "skills_override": [],
+  "manual_skills": [],
+  "manual_tools": [],
+  "manual_highlights": [],
+  "manual_notes": [],
+  "repo_links": [],
+  "experience_links": [],
+  "source": {
+    "cv_file": "",
+    "notes": ""
+  },
+  "updated_at": ""
+}

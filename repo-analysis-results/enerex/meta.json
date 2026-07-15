@@ -1,0 +1,17 @@
+{
+  "repo_name": "Enerex",
+  "repo_slug": "enerex",
+  "repo_path": "C:\\Users\\Bande\\Enerex",
+  "analyzed_at": "2026-07-08T14:45:51+00:00",
+  "summary": {
+    "files_scanned": 254,
+    "languages_detected": 7,
+    "frameworks_detected": 7,
+    "capabilities_detected": 2
+  },
+  "files": {
+    "analysis_json": "analysis.json",
+    "analysis_markdown": "analysis.md",
+    "meta_json": "meta.json"
+  }
+}
