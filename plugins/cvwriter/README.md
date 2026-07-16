@@ -1,11 +1,11 @@
 # cvWriter
 
-`cvWriter` is a Codex plugin that packages the reusable CV-generation workflow from this repository.
+`cvWriter` is a Codex plugin that packages a grounded, AI-authored CV workflow from this repository.
 
 The plugin contains:
 
 - a `cvwriter` skill for Codex
-- reusable Python scripts for managing CV data and job targets
+- reusable Python scripts for managing CV data, job targets, and CV authoring payloads
 - starter JSON templates for each user to fill with their own background
 
 The plugin does not include personal resume data or generated outputs.
@@ -57,10 +57,28 @@ After bootstrap, run the remaining commands from the workspace root so generated
 2. Fill `cv-data/profile.json`.
 3. Add experiences and projects under `cv-data/`.
 4. Import a job posting with `<plugin-root>\scripts\manage_job_targets.py`.
-5. Generate a CV with `<plugin-root>\scripts\generate_cv.py`.
-6. Render the markdown to PDF with `<plugin-root>\scripts\render_cv_pdf.py`.
+5. Export a single structured workspace payload with `<plugin-root>\scripts\prepare_cv_payload.py`.
+6. Let Codex read that payload and decide how to select, prioritize, and phrase the CV content.
+7. Render the markdown to PDF with `<plugin-root>\scripts\render_cv_pdf.py`.
 
 The `cvwriter` skill in Codex wraps this workflow and should be preferred over invoking the scripts manually.
+
+## AI-authored CVs
+
+`prepare_cv_payload.py` does not write the CV itself. Instead, it creates a single structured JSON payload plus brief/output metadata:
+
+- `authoring-payload.json`
+- `authoring-brief.md`
+
+Codex reads those files and writes:
+
+- `cv.draft.md`
+- `cv.md`
+- `latest.md` for generated-cvs mirrors when applicable
+
+This keeps workspace export deterministic while moving all selection and writing decisions into the model.
+
+`generate_cv.py` remains as a compatibility wrapper that forwards to `prepare_cv_payload.py`.
 
 ## Install and update
 
