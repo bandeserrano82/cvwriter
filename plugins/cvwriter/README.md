@@ -1,6 +1,16 @@
 # cvWriter
 
-`cvWriter` is a Codex plugin that packages a grounded, AI-authored CV workflow from this repository.
+`cvWriter` is a Codex plugin for people looking for work who want one organized place to manage job posts, applications, repository-backed skill evidence, and tailored resumes.
+
+In plain language, `cvWriter` helps users:
+
+- organize their job search in a structured workspace
+- keep job posts and application materials connected
+- scan their own repositories for evidence of skills and experience without exposing private code outside their environment
+- generate tailored resumes grounded in real evidence
+- produce polished final PDFs when they are ready to apply
+
+On first use, the intended experience is guided onboarding. Instead of expecting users to know the file structure, Codex should walk them through profile details, work experience, education, projects, and repository links step by step, then write that information into the workspace.
 
 The plugin contains:
 
@@ -54,7 +64,7 @@ After bootstrap, run the remaining commands from the workspace root so generated
 ## Typical workflow
 
 1. Initialize the workspace.
-2. Fill `cv-data/profile.json`.
+2. Add profile and education details.
 3. Add experiences and projects under `cv-data/`.
 4. Import a job posting with `<plugin-root>\scripts\manage_job_targets.py`.
 5. Export a single structured workspace payload with `<plugin-root>\scripts\prepare_cv_payload.py`.

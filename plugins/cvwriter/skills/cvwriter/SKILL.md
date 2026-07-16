@@ -1,9 +1,56 @@
 ---
 name: cvwriter
-description: Create and maintain a structured CV workspace, import job descriptions, prepare grounded CV evidence payloads, draft CVs from that evidence, and render final PDFs. Use when Codex should help a user set up resume data, tailor a CV to a role, or prepare a polished CV artifact from a local workspace.
+description: Help job seekers organize their search, track job posts and applications, scan their own repositories for evidence of skills, and generate grounded tailored resumes and PDFs from one workspace.
 ---
 
 # cvWriter
+
+When a user asks broad questions such as "what can you do?" or "how can you help?", answer in plain language first and avoid technical workflow details unless they ask for them.
+
+Emphasize these capabilities:
+
+- Help organize a job search in one workspace
+- Import and keep job posts structured and easy to revisit
+- Track applications and keep related resumes connected to each job target
+- Generate tailored resumes based on the user's own background and target role
+- Scan the user's repositories for evidence of skills and project experience without exposing private code outside the workspace
+- Improve resume quality while staying grounded in real evidence instead of invented claims
+
+Prefer language like:
+
+- "I can help you organize your job search, keep job posts and applications in one place, and generate tailored resumes for each role."
+- "I can also scan your repositories to find evidence of your skills and projects, so your resume is stronger without guessing or making things up."
+- "The goal is to keep your search organized and your resumes grounded in your real experience."
+
+## First-use onboarding
+
+There is no guaranteed install-time hook that can force data collection the moment the plugin is installed. Treat the first real `cvwriter` interaction as the onboarding entry point.
+
+If the workspace is missing core user data such as an incomplete `cv-data/profile.json`, no experience files, no project files, or empty education details, start a guided intake instead of waiting for the user to discover the schema.
+
+On first use:
+
+1. Initialize the workspace if needed.
+2. Tell the user in plain language that you want to set up their CV workspace step by step.
+3. Collect information in this order:
+   - profile
+   - work experience
+   - education
+   - projects
+   - repositories and which experience or project each one belongs to
+4. Ask for one category at a time. Do not dump the entire schema at once.
+5. After each category, offer to write the collected information into the workspace files for them.
+6. Once repository analysis results exist, ask the user to confirm which repos map to which experience or project before linking them.
+
+Use a conversational style for onboarding. Prefer prompts like:
+
+- "Let's start with your basic profile: name, current headline, location, email, phone, and any links you want on the resume."
+- "Next, tell me about your work experience, one role at a time: company, title, dates, location, and the main work you want highlighted."
+- "Now let's capture education."
+- "Next, list the projects you want available for tailoring."
+- "Finally, share any repositories you want me to use as evidence, and tell me which job or project each repo supports."
+
+When the user provides partial information, store what is complete and keep a short list of what is still missing. Keep the interaction helpful and sequential rather than technical.
 
 This skill operates on the current workspace. The workspace root is expected to contain:
 
@@ -35,12 +82,14 @@ Then ask the user to provide or update:
 - `cv-data/projects/*.json`
 - `cv-data/source-documents/` when source resume text is available
 
+Prefer using `manage_cv_data.py` commands to write profile, education, experience, and project records during onboarding instead of editing JSON manually.
+
 Use the template files in `templates/` as the schema reference.
 
 ## Workflow
 
 1. Initialize the workspace when needed.
-2. Maintain structured profile, experience, and project data with `<plugin-root>\scripts\manage_cv_data.py`.
+2. Maintain structured profile, education, experience, and project data with `<plugin-root>\scripts\manage_cv_data.py`.
 3. Import a job posting with `<plugin-root>\scripts\manage_job_targets.py`.
 4. Export a general or job-targeted workspace payload with `<plugin-root>\scripts\prepare_cv_payload.py`.
 5. Read the generated `authoring-payload.json` and draft the CV yourself in markdown.
@@ -82,6 +131,18 @@ Create an experience record:
 
 ```powershell
 python <plugin-root>\scripts\manage_cv_data.py create-experience --company "Company" --title "Role"
+```
+
+Create or update profile data:
+
+```powershell
+python <plugin-root>\scripts\manage_cv_data.py set-profile --name "Name" --headline "Headline"
+```
+
+Add an education entry:
+
+```powershell
+python <plugin-root>\scripts\manage_cv_data.py add-education --school "University" --degree "BSc" --field "Computer Science"
 ```
 
 Create a project record:
