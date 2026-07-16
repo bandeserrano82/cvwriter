@@ -10,7 +10,7 @@ PLUGIN_SCRIPT = (
     / "plugins"
     / "cvwriter"
     / "scripts"
-    / "prepare_cv_payload.py"
+    / "validate_cv_workspace.py"
 )
 
 

@@ -63,6 +63,7 @@ def ensure_base_files() -> None:
                     "github": "",
                     "portfolio": "",
                 },
+                "education": [],
                 "updated_at": now_utc(),
             },
         )
@@ -223,6 +224,87 @@ def create_project(args: argparse.Namespace) -> None:
     print(str(path))
 
 
+def update_profile(args: argparse.Namespace) -> None:
+    ensure_base_files()
+    profile = read_json(
+        PROFILE_PATH,
+        {
+            "name": "",
+            "headline": "",
+            "summary": "",
+            "location": "",
+            "email": "",
+            "phone": "",
+            "links": {
+                "linkedin": "",
+                "github": "",
+                "portfolio": "",
+            },
+            "education": [],
+            "updated_at": now_utc(),
+        },
+    )
+
+    profile.setdefault("links", {})
+    profile.setdefault("education", [])
+
+    field_map = {
+        "name": args.name,
+        "headline": args.headline,
+        "summary": args.summary,
+        "location": args.location,
+        "email": args.email,
+        "phone": args.phone,
+    }
+    for key, value in field_map.items():
+        if value is not None:
+            profile[key] = value
+
+    link_map = {
+        "linkedin": args.linkedin,
+        "github": args.github,
+        "portfolio": args.portfolio,
+    }
+    for key, value in link_map.items():
+        if value is not None:
+            profile["links"][key] = value
+
+    profile["updated_at"] = now_utc()
+    write_json(PROFILE_PATH, profile)
+    print(str(PROFILE_PATH))
+
+
+def add_education(args: argparse.Namespace) -> None:
+    ensure_base_files()
+    profile = read_json(PROFILE_PATH, {})
+    profile.setdefault("education", [])
+
+    education_id = slugify(args.id or "-".join(part for part in [args.school, args.degree or args.field or "education"] if part))
+    entry = {
+        "id": education_id,
+        "school": args.school,
+        "degree": args.degree or "",
+        "field": args.field or "",
+        "start_date": args.start_date or "",
+        "end_date": args.end_date or "",
+        "location": args.location or "",
+        "summary": args.summary or "",
+        "highlights": args.highlight or [],
+    }
+
+    education = profile["education"]
+    for index, existing in enumerate(education):
+        if existing.get("id") == education_id:
+            education[index] = entry
+            break
+    else:
+        education.append(entry)
+
+    profile["updated_at"] = now_utc()
+    write_json(PROFILE_PATH, profile)
+    print(str(PROFILE_PATH))
+
+
 def load_entity(path: Path) -> dict:
     if not path.exists():
         raise FileNotFoundError(path)
@@ -327,6 +409,28 @@ def parse_args() -> argparse.Namespace:
     subparsers.add_parser("sync-repos", help="Sync repo-analysis-results into cv-data links.")
     subparsers.add_parser("list-unlinked", help="Show analyzed repos with no experience/project link.")
 
+    profile = subparsers.add_parser("set-profile", help="Create or update profile details.")
+    profile.add_argument("--name")
+    profile.add_argument("--headline")
+    profile.add_argument("--summary")
+    profile.add_argument("--location")
+    profile.add_argument("--email")
+    profile.add_argument("--phone")
+    profile.add_argument("--linkedin")
+    profile.add_argument("--github")
+    profile.add_argument("--portfolio")
+
+    education = subparsers.add_parser("add-education", help="Add or replace an education entry.")
+    education.add_argument("--id")
+    education.add_argument("--school", required=True)
+    education.add_argument("--degree")
+    education.add_argument("--field")
+    education.add_argument("--start-date")
+    education.add_argument("--end-date")
+    education.add_argument("--location")
+    education.add_argument("--summary")
+    education.add_argument("--highlight", action="append")
+
     exp = subparsers.add_parser("create-experience", help="Create an experience entry.")
     exp.add_argument("--id")
     exp.add_argument("--company", required=True)
@@ -376,6 +480,10 @@ def main() -> int:
         sync_repo_links()
     elif args.command == "sync-repos":
         sync_repo_links()
+    elif args.command == "set-profile":
+        update_profile(args)
+    elif args.command == "add-education":
+        add_education(args)
     elif args.command == "create-experience":
         create_experience(args)
     elif args.command == "create-project":

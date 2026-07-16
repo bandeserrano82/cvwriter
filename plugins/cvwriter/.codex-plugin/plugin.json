@@ -1,7 +1,7 @@
 {
   "name": "cvwriter",
   "version": "0.1.0",
-  "description": "Generate tailored CV drafts and PDFs from structured profile data and job targets.",
+  "description": "Help job seekers organize their search, turn experience into tailored resumes, and keep applications and CVs in one secure workspace.",
   "author": {
     "name": "Jose Bande Serrano"
   },
@@ -14,17 +14,17 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "cvWriter",
-    "shortDescription": "Generate targeted CVs from structured workspace data.",
-    "longDescription": "cvWriter helps Codex initialize a CV workspace, maintain resume data, import job descriptions, generate tailored CV drafts, and render final PDFs.",
+    "shortDescription": "Organize your job search and generate tailored resumes in one workspace.",
+    "longDescription": "cvWriter helps people looking for work organize job posts, track applications, scan their own repositories for evidence of skills without exposing private code, and generate tailored resumes and final PDFs from grounded evidence.",
     "developerName": "Jose Bande Serrano",
     "category": "Productivity",
     "capabilities": [
       "Write"
     ],
     "defaultPrompt": [
-      "Set up a cvWriter workspace in this folder.",
-      "Import this job post and generate a targeted CV.",
-      "Render my latest CV markdown to PDF."
+      "Set up my CV workspace and guide me through profile, experience, education, projects, and repo evidence step by step.",
+      "Import this job post, tailor my resume to it, and keep the output organized.",
+      "Scan my repos for evidence of my skills and use that to improve my CV."
     ]
   }
 }

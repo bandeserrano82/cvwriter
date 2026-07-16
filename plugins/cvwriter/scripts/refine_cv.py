@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+"""Legacy deterministic CV refinement helpers.
+
+This module supported the pre-AI authoring workflow where Python generated the
+CV body directly. It is kept only as a reference during the migration to
+payload-driven AI authoring and should not be part of new cvWriter workflows.
+"""
+
 import re
 from datetime import datetime
 
