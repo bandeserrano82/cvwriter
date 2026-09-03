@@ -11,6 +11,20 @@ CV_DATA_DIR = ROOT / "cv-data"
 JOB_TARGETS_DIR = ROOT / "job-targets"
 GENERATED_CVS_DIR = ROOT / "generated-cvs"
 REPO_ANALYSIS_DIR = ROOT / "repo-analysis-results"
+WORK_MODES = {"full-time", "part-time"}
+EMPLOYMENT_TYPES = {
+    "w2-employee",
+    "w2-staffing-company",
+    "independent-contractor-1099-nec",
+    "contractor-through-own-business",
+}
+PROXY_REQUIRED_EMPLOYMENT_TYPES = {
+    "w2-staffing-company",
+    "contractor-through-own-business",
+}
+PROXY_COMPANY_FIELDS = {"name", "website", "phone", "email"}
+PROXY_ADDRESS_FIELDS = {"line1", "line2", "city", "state", "postal_code", "country"}
+PROXY_CONTACT_FIELDS = {"name", "title", "department", "email", "phone", "linkedin"}
 
 
 def read_json(path: Path):
@@ -36,6 +50,60 @@ def ensure_list_of_strings(values, field_name: str, errors: list[str]) -> None:
     for index, value in enumerate(values):
         if not isinstance(value, str):
             errors.append(f"{field_name}[{index}] must be a string.")
+
+
+def ensure_optional_string_fields(
+    values: dict, allowed_fields: set[str], field_name: str, errors: list[str]
+) -> None:
+    for field in allowed_fields:
+        value = values.get(field, "")
+        if value is not None and not isinstance(value, str):
+            errors.append(f"{field_name}.{field} must be a string when present.")
+
+
+def validate_proxy_company(payload: dict, path: Path, errors: list[str]) -> None:
+    proxy_company = payload.get("proxy_company")
+    employment_type = payload.get("employment_type", "")
+
+    if isinstance(employment_type, str) and employment_type in PROXY_REQUIRED_EMPLOYMENT_TYPES and not isinstance(proxy_company, dict):
+        errors.append(f"{path.name}.proxy_company is required for {employment_type}.")
+        return
+    if proxy_company is None:
+        return
+    if not isinstance(proxy_company, dict):
+        errors.append(f"{path.name}.proxy_company must be an object when present.")
+        return
+    if not isinstance(employment_type, str) or employment_type not in PROXY_REQUIRED_EMPLOYMENT_TYPES:
+        errors.append(f"{path.name}.proxy_company is only allowed for staffing-company or own-business arrangements.")
+
+    name = proxy_company.get("name")
+    if not isinstance(name, str) or not name.strip():
+        errors.append(f"{path.name}.proxy_company.name must be a non-empty string.")
+    ensure_optional_string_fields(proxy_company, PROXY_COMPANY_FIELDS, f"{path.name}.proxy_company", errors)
+
+    address = proxy_company.get("address")
+    if address is not None:
+        if not isinstance(address, dict):
+            errors.append(f"{path.name}.proxy_company.address must be an object when present.")
+        else:
+            ensure_optional_string_fields(
+                address,
+                PROXY_ADDRESS_FIELDS,
+                f"{path.name}.proxy_company.address",
+                errors,
+            )
+
+    contact_person = proxy_company.get("contact_person")
+    if contact_person is not None:
+        if not isinstance(contact_person, dict):
+            errors.append(f"{path.name}.proxy_company.contact_person must be an object when present.")
+        else:
+            ensure_optional_string_fields(
+                contact_person,
+                PROXY_CONTACT_FIELDS,
+                f"{path.name}.proxy_company.contact_person",
+                errors,
+            )
 
 
 def validate_profile(path: Path) -> list[str]:
@@ -83,17 +151,22 @@ def validate_item(path: Path, kind: str) -> list[str]:
         if value and not isinstance(value, str):
             errors.append(f"{path.name}.{field} must be a string.")
 
-    for field in (
-        "summary",
-        "employment_type",
-        "title",
-        "location",
-        "start_date",
-        "end_date",
-    ):
+    fields = ("summary", "title", "location", "start_date", "end_date")
+    if kind == "experience":
+        fields += ("employment_type", "work_mode")
+    for field in fields:
         value = payload.get(field, "")
         if value and not isinstance(value, str):
             errors.append(f"{path.name}.{field} must be a string when present.")
+
+    if kind == "experience":
+        employment_type = payload.get("employment_type", "")
+        work_mode = payload.get("work_mode", "")
+        if isinstance(employment_type, str) and employment_type and employment_type not in EMPLOYMENT_TYPES:
+            errors.append(f"{path.name}.employment_type is not a supported employment relationship.")
+        if isinstance(work_mode, str) and work_mode and work_mode not in WORK_MODES:
+            errors.append(f"{path.name}.work_mode must be full-time or part-time.")
+        validate_proxy_company(payload, path, errors)
 
     ensure_list_of_strings(payload.get("manual_skills", []), f"{path.name}.manual_skills", errors)
     ensure_list_of_strings(payload.get("manual_tools", []), f"{path.name}.manual_tools", errors)

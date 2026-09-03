@@ -61,6 +61,23 @@ python <plugin-root>\scripts\bootstrap_cv_workspace.py --workspace <their-worksp
 
 After bootstrap, run the remaining commands from the workspace root so generated files land in the expected folders.
 
+## Experience arrangements
+
+Experience records use `work_mode` for working-hours format (`full-time` or
+`part-time`) and `employment_type` for the legal engagement relationship:
+
+- `w2-employee`
+- `w2-staffing-company`
+- `independent-contractor-1099-nec`
+- `contractor-through-own-business`
+
+The staffing-company and own-business relationships require a `proxy_company`
+object. It identifies the intermediary company and can include its website,
+address, phone, email, and a contact person with their title and contact
+details. This information remains in the workspace payload and is excluded from
+generated CVs unless the author intentionally mentions the company name to
+clarify the relationship.
+
 ## Typical workflow
 
 1. Initialize the workspace.

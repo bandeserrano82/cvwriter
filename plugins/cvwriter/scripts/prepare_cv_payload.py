@@ -118,6 +118,8 @@ def build_workspace_payload(mode: str, job: dict | None, target_job_id: str | No
             "Prefer explicit user-authored manual content over inferred repo evidence when they conflict.",
             "Use repo evidence to support technical depth, not to fabricate ownership or impact.",
             "If evidence is weak or ambiguous, omit the claim or phrase it conservatively.",
+            "Do not include proxy company addresses, contact details, or contact-person details in CV output.",
+            "Mention a proxy company only when it clarifies the employment relationship.",
         ],
         "output_contract": {
             "format": "markdown",
