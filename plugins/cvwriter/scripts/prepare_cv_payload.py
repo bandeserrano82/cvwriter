@@ -15,6 +15,12 @@ CV_DATA_DIR = ROOT / "cv-data"
 JOB_TARGETS_DIR = ROOT / "job-targets"
 GENERATED_CVS_DIR = ROOT / "generated-cvs"
 REPO_ANALYSIS_DIR = ROOT / "repo-analysis-results"
+EMPLOYMENT_TYPE_LABELS = {
+    "independent-contractor-1099-nec": "Independent Contractor",
+    "contractor-through-own-business": "Contractor",
+    "w2-employee": "W2",
+    "w2-staffing-company": "W2 via Staffing Company",
+}
 
 
 def now_utc() -> str:
@@ -79,6 +85,11 @@ def normalize_list(values) -> list:
 def normalize_item(item: dict, kind: str) -> dict:
     normalized = dict(item)
     normalized["kind"] = kind
+    if kind == "experience":
+        employment_type = normalized.get("employment_type", "")
+        normalized["employment_type_display"] = EMPLOYMENT_TYPE_LABELS.get(
+            employment_type, employment_type
+        )
     for field in (
         "manual_highlights",
         "manual_notes",
@@ -119,7 +130,8 @@ def build_workspace_payload(mode: str, job: dict | None, target_job_id: str | No
             "Use repo evidence to support technical depth, not to fabricate ownership or impact.",
             "If evidence is weak or ambiguous, omit the claim or phrase it conservatively.",
             "Do not include proxy company addresses, contact details, or contact-person details in CV output.",
-            "Mention a proxy company only when it clarifies the employment relationship.",
+            "When present, render only proxy_company.name; never render its address or contact-person details.",
+            "Use employment_type_display rather than the technical employment_type value in CV output.",
         ],
         "output_contract": {
             "format": "markdown",
@@ -136,7 +148,7 @@ def build_workspace_payload(mode: str, job: dict | None, target_job_id: str | No
                 "Start with '# <name>' on the first line.",
                 "Put headline on the next non-empty line when available.",
                 "Put contact details on the next non-empty line when available.",
-                "Use '##' for section headings and '###' for each experience or project heading.",
+                "Use '##' for section headings. Render each experience over three heading lines: '### <job title>, <company>'; '#### <employment type display>, <proxy company name if present>'; and '##### <work mode>, <location>, <formatted dates>'. Omit only the proxy-company segment when proxy_company is null.",
                 "Use bullet lists for achievements under experience and project entries.",
                 "Do not include any section that has no grounded content.",
             ],

@@ -63,6 +63,26 @@ def build_styles():
             spaceBefore=6,
             spaceAfter=2,
         ),
+        "h4": ParagraphStyle(
+            "H4",
+            parent=styles["Heading4"],
+            fontName="Helvetica-Bold",
+            fontSize=9.5,
+            leading=12,
+            textColor=HexColor("#374151"),
+            spaceBefore=1,
+            spaceAfter=1,
+        ),
+        "h5": ParagraphStyle(
+            "H5",
+            parent=styles["Heading5"],
+            fontName="Helvetica-Oblique",
+            fontSize=9,
+            leading=11,
+            textColor=HexColor("#6b7280"),
+            spaceBefore=0,
+            spaceAfter=4,
+        ),
         "body": ParagraphStyle(
             "Body",
             parent=styles["Normal"],
@@ -115,6 +135,10 @@ def parse_markdown(markdown: str):
             items.append(("h1", stripped[2:].strip()))
         elif stripped.startswith("## "):
             items.append(("h2", stripped[3:].strip()))
+        elif stripped.startswith("##### "):
+            items.append(("h5", stripped[6:].strip()))
+        elif stripped.startswith("#### "):
+            items.append(("h4", stripped[5:].strip()))
         elif stripped.startswith("### "):
             items.append(("h3", stripped[4:].strip()))
         elif stripped.startswith("- "):
@@ -153,6 +177,10 @@ def render_pdf(markdown_path: Path, pdf_path: Path) -> None:
             story.append(Paragraph(escape_text(text), styles["h2"]))
         elif kind == "h3":
             story.append(Paragraph(escape_text(text), styles["h3"]))
+        elif kind == "h4":
+            story.append(Paragraph(escape_text(text), styles["h4"]))
+        elif kind == "h5":
+            story.append(Paragraph(escape_text(text), styles["h5"]))
         elif kind == "bullet":
             story.append(Paragraph(escape_text(text), styles["bullet"], bulletText="•"))
         elif kind == "p":

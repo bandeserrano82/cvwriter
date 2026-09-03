@@ -115,6 +115,20 @@ own-business relationships, it is a company object with `name`, `website`,
 their name, title, department, email, phone, and LinkedIn URL. This private
 data is not included in generated CVs by default.
 
+Each generated CV experience heading uses this order: job title, company,
+employment type, proxy company name when present, work mode, and location.
+Only the proxy company name is rendered; its address and contact details remain
+private.
+
+Generated CVs use these readable employment labels: `Independent Contractor`
+for `independent-contractor-1099-nec`, `Contractor` for
+`contractor-through-own-business`, `W2` for `w2-employee`, and `W2 via
+Staffing Company` for `w2-staffing-company`.
+
+Experience entries render across three lines: a title and company heading, an
+employment-type and proxy-company subheading, and a work-mode, location, and
+dates subsubheading.
+
 Create a project entry:
 
 ```powershell
