@@ -71,12 +71,13 @@ Experience records use `work_mode` for working-hours format (`full-time` or
 - `independent-contractor-1099-nec`
 - `contractor-through-own-business`
 
-The staffing-company and own-business relationships require a `proxy_company`
-object. It identifies the intermediary company and can include its website,
-address, phone, email, and a contact person with their title and contact
-details. This information remains in the workspace payload and is excluded from
-generated CVs unless the author intentionally mentions the company name to
-clarify the relationship.
+`proxy_company` is `null` for direct engagements. For staffing-company and
+own-business relationships, it is an object containing the intermediary's
+name, website, address, phone, email, and a nested `contact_person` record
+with their name, title, department, email, phone, and LinkedIn URL. This
+information remains in the workspace payload and is excluded from generated
+CVs unless the author intentionally mentions the company name to clarify the
+relationship.
 
 ## Typical workflow
 

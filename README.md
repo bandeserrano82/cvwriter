@@ -109,9 +109,11 @@ python scripts/manage_cv_data.py create-experience `
 
 Supported employment relationships are `w2-employee`, `w2-staffing-company`,
 `independent-contractor-1099-nec`, and `contractor-through-own-business`.
-`proxy_company` is required only for the staffing-company and own-business
-relationships. Its address and contact details stay in private workspace data
-and are not included in generated CVs by default.
+`proxy_company` is `null` for direct engagements. For staffing-company and
+own-business relationships, it is a company object with `name`, `website`,
+`address`, `phone`, `email`, and a nested `contact_person` record containing
+their name, title, department, email, phone, and LinkedIn URL. This private
+data is not included in generated CVs by default.
 
 Create a project entry:
 
