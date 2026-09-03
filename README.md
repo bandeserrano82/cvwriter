@@ -67,8 +67,51 @@ Create a first experience entry:
 ```powershell
 python scripts/manage_cv_data.py create-experience `
   --company "Example Corp" `
-  --title "Software Engineer"
+  --title "Software Engineer" `
+  --employment-type "w2-employee" `
+  --work-mode "full-time"
 ```
+
+For staffing-company or own-business engagements, provide the proxy company in a
+separate JSON file and reference it when creating the experience:
+
+```json
+{
+  "name": "Example Staffing",
+  "website": "https://example.com",
+  "address": {
+    "line1": "123 Main Street",
+    "city": "New York",
+    "state": "NY",
+    "postal_code": "10001",
+    "country": "US"
+  },
+  "phone": "+1-555-0100",
+  "email": "contact@example.com",
+  "contact_person": {
+    "name": "Jane Smith",
+    "title": "Account Manager",
+    "email": "jane.smith@example.com",
+    "phone": "+1-555-0101",
+    "linkedin": "https://www.linkedin.com/in/janesmith"
+  }
+}
+```
+
+```powershell
+python scripts/manage_cv_data.py create-experience `
+  --company "Client Corp" `
+  --title "Software Engineer" `
+  --employment-type "w2-staffing-company" `
+  --work-mode "full-time" `
+  --proxy-company-file .\example-staffing.json
+```
+
+Supported employment relationships are `w2-employee`, `w2-staffing-company`,
+`independent-contractor-1099-nec`, and `contractor-through-own-business`.
+`proxy_company` is required only for the staffing-company and own-business
+relationships. Its address and contact details stay in private workspace data
+and are not included in generated CVs by default.
 
 Create a project entry:
 

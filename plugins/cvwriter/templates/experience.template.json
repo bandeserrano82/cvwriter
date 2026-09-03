@@ -3,6 +3,8 @@
   "company": "",
   "title": "",
   "employment_type": "",
+  "work_mode": "",
+  "proxy_company": null,
   "start_date": "YYYY-MM",
   "end_date": "YYYY-MM or present",
   "location": "",

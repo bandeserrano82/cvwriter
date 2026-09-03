@@ -17,6 +17,17 @@ SOURCE_DOCS_DIR = CV_DATA_DIR / "source-documents"
 PROFILE_PATH = CV_DATA_DIR / "profile.json"
 REPO_LINKS_PATH = LINKS_DIR / "repo-links.json"
 REPO_RESULTS_INDEX = ROOT / "repo-analysis-results" / "index.json"
+WORK_MODES = {"full-time", "part-time"}
+EMPLOYMENT_TYPES = {
+    "w2-employee",
+    "w2-staffing-company",
+    "independent-contractor-1099-nec",
+    "contractor-through-own-business",
+}
+PROXY_REQUIRED_EMPLOYMENT_TYPES = {
+    "w2-staffing-company",
+    "contractor-through-own-business",
+}
 
 
 def slugify(value: str) -> str:
@@ -85,6 +96,8 @@ def ensure_base_files() -> None:
                 "company": "",
                 "title": "",
                 "employment_type": "",
+                "work_mode": "",
+                "proxy_company": None,
                 "start_date": "YYYY-MM",
                 "end_date": "YYYY-MM or present",
                 "location": "",
@@ -165,6 +178,8 @@ def sync_repo_links() -> dict:
 
 def create_experience(args: argparse.Namespace) -> None:
     ensure_base_files()
+    proxy_company = load_proxy_company(args.proxy_company_file)
+    validate_experience_arrangement(args.employment_type, args.work_mode, proxy_company)
     exp_id = slugify(args.id or f"{args.company}-{args.title}")
     path = EXPERIENCES_DIR / f"{exp_id}.json"
     payload = {
@@ -172,6 +187,8 @@ def create_experience(args: argparse.Namespace) -> None:
         "company": args.company,
         "title": args.title,
         "employment_type": args.employment_type or "",
+        "work_mode": args.work_mode or "",
+        "proxy_company": proxy_company,
         "start_date": args.start_date or "",
         "end_date": args.end_date or "",
         "location": args.location or "",
@@ -192,6 +209,36 @@ def create_experience(args: argparse.Namespace) -> None:
     }
     write_json(path, payload)
     print(str(path))
+
+
+def load_proxy_company(path_value: str | None) -> dict | None:
+    if not path_value:
+        return None
+    path = Path(path_value)
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except OSError as exc:
+        raise ValueError(f"Could not read proxy company file: {path}") from exc
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"Proxy company file is not valid JSON: {path}") from exc
+    if not isinstance(payload, dict):
+        raise ValueError("Proxy company file must contain a JSON object.")
+    return payload
+
+
+def validate_experience_arrangement(
+    employment_type: str | None, work_mode: str | None, proxy_company: dict | None
+) -> None:
+    if work_mode and work_mode not in WORK_MODES:
+        raise ValueError(f"work_mode must be one of: {', '.join(sorted(WORK_MODES))}.")
+    if employment_type and employment_type not in EMPLOYMENT_TYPES:
+        raise ValueError(
+            f"employment_type must be one of: {', '.join(sorted(EMPLOYMENT_TYPES))}."
+        )
+    if employment_type in PROXY_REQUIRED_EMPLOYMENT_TYPES and proxy_company is None:
+        raise ValueError(f"{employment_type} requires --proxy-company-file.")
+    if proxy_company is not None and employment_type not in PROXY_REQUIRED_EMPLOYMENT_TYPES:
+        raise ValueError("proxy_company is only allowed for staffing-company or own-business arrangements.")
 
 
 def create_project(args: argparse.Namespace) -> None:
@@ -331,7 +378,12 @@ def parse_args() -> argparse.Namespace:
     exp.add_argument("--id")
     exp.add_argument("--company", required=True)
     exp.add_argument("--title", required=True)
-    exp.add_argument("--employment-type")
+    exp.add_argument("--employment-type", choices=sorted(EMPLOYMENT_TYPES))
+    exp.add_argument("--work-mode", choices=sorted(WORK_MODES))
+    exp.add_argument(
+        "--proxy-company-file",
+        help="Path to a JSON object describing the staffing firm or contractor's own business.",
+    )
     exp.add_argument("--start-date")
     exp.add_argument("--end-date")
     exp.add_argument("--location")
