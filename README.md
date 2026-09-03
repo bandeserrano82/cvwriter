@@ -109,9 +109,25 @@ python scripts/manage_cv_data.py create-experience `
 
 Supported employment relationships are `w2-employee`, `w2-staffing-company`,
 `independent-contractor-1099-nec`, and `contractor-through-own-business`.
-`proxy_company` is required only for the staffing-company and own-business
-relationships. Its address and contact details stay in private workspace data
-and are not included in generated CVs by default.
+`proxy_company` is `null` for direct engagements. For staffing-company and
+own-business relationships, it is a company object with `name`, `website`,
+`address`, `phone`, `email`, and a nested `contact_person` record containing
+their name, title, department, email, phone, and LinkedIn URL. This private
+data is not included in generated CVs by default.
+
+Each generated CV experience heading uses this order: job title, company,
+employment type, proxy company name when present, work mode, and location.
+Only the proxy company name is rendered; its address and contact details remain
+private.
+
+Generated CVs use these readable employment labels: `Independent Contractor`
+for `independent-contractor-1099-nec`, `Contractor` for
+`contractor-through-own-business`, `W2` for `w2-employee`, and `W2 via
+Staffing Company` for `w2-staffing-company`.
+
+Experience entries render across three lines: a title and company heading, an
+employment-type and proxy-company subheading, and a work-mode, location, and
+dates subsubheading.
 
 Create a project entry:
 
