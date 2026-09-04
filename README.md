@@ -68,11 +68,11 @@ Create a first experience entry:
 python scripts/manage_cv_data.py create-experience `
   --company "Example Corp" `
   --title "Software Engineer" `
-  --employment-type "w2-employee" `
+  --employment-type "Hire (W2)" `
   --work-mode "full-time"
 ```
 
-For staffing-company or own-business engagements, provide the proxy company in a
+For W2 through staffing-company engagements, provide the proxy company in a
 separate JSON file and reference it when creating the experience:
 
 ```json
@@ -102,15 +102,14 @@ separate JSON file and reference it when creating the experience:
 python scripts/manage_cv_data.py create-experience `
   --company "Client Corp" `
   --title "Software Engineer" `
-  --employment-type "w2-staffing-company" `
+  --employment-type "W2 through Staffing Company" `
   --work-mode "full-time" `
   --proxy-company-file .\example-staffing.json
 ```
 
-Supported employment relationships are `w2-employee`, `w2-staffing-company`,
-`independent-contractor-1099-nec`, and `contractor-through-own-business`.
-`proxy_company` is `null` for direct engagements. For staffing-company and
-own-business relationships, it is a company object with `name`, `website`,
+Supported employment relationships are `Hire (W2)`, `W2 through Staffing Company`,
+`Contract (1099)`, `Hire`, and `Contract`. `proxy_company` is `null` for direct
+engagements. For W2 through staffing-company relationships, it is a company object with `name`, `website`,
 `address`, `phone`, `email`, and a nested `contact_person` record containing
 their name, title, department, email, phone, and LinkedIn URL. This private
 data is not included in generated CVs by default.
@@ -120,10 +119,7 @@ employment type, proxy company name when present, work mode, and location.
 Only the proxy company name is rendered; its address and contact details remain
 private.
 
-Generated CVs use these readable employment labels: `Independent Contractor`
-for `independent-contractor-1099-nec`, `Contractor` for
-`contractor-through-own-business`, `W2` for `w2-employee`, and `W2 via
-Staffing Company` for `w2-staffing-company`.
+Generated CVs use the employment type value as written.
 
 Experience entries render across three lines: a title and company heading, an
 employment-type and proxy-company subheading, and a work-mode, location, and

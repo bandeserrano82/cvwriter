@@ -19,14 +19,14 @@ REPO_LINKS_PATH = LINKS_DIR / "repo-links.json"
 REPO_RESULTS_INDEX = ROOT / "repo-analysis-results" / "index.json"
 WORK_MODES = {"full-time", "part-time"}
 EMPLOYMENT_TYPES = {
-    "w2-employee",
-    "w2-staffing-company",
-    "independent-contractor-1099-nec",
-    "contractor-through-own-business",
+    "Hire (W2)",
+    "W2 through Staffing Company",
+    "Contract (1099)",
+    "Hire",
+    "Contract",
 }
 PROXY_REQUIRED_EMPLOYMENT_TYPES = {
-    "w2-staffing-company",
-    "contractor-through-own-business",
+    "W2 through Staffing Company",
 }
 
 
@@ -260,7 +260,7 @@ def validate_experience_arrangement(
     if employment_type in PROXY_REQUIRED_EMPLOYMENT_TYPES and proxy_company is None:
         raise ValueError(f"{employment_type} requires --proxy-company-file.")
     if proxy_company is not None and employment_type not in PROXY_REQUIRED_EMPLOYMENT_TYPES:
-        raise ValueError("proxy_company is only allowed for staffing-company or own-business arrangements.")
+        raise ValueError("proxy_company is only allowed for W2 through Staffing Company arrangements.")
 
 
 def create_project(args: argparse.Namespace) -> None:
@@ -507,7 +507,7 @@ def parse_args() -> argparse.Namespace:
     exp.add_argument("--work-mode", choices=sorted(WORK_MODES))
     exp.add_argument(
         "--proxy-company-file",
-        help="Path to a JSON object describing the staffing firm or contractor's own business.",
+        help="Path to a JSON object describing the staffing company.",
     )
     exp.add_argument("--start-date")
     exp.add_argument("--end-date")
