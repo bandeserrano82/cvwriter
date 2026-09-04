@@ -17,7 +17,6 @@ SOURCE_DOCS_DIR = CV_DATA_DIR / "source-documents"
 PROFILE_PATH = CV_DATA_DIR / "profile.json"
 REPO_LINKS_PATH = LINKS_DIR / "repo-links.json"
 REPO_RESULTS_INDEX = ROOT / "repo-analysis-results" / "index.json"
-WORK_MODES = {"full-time", "part-time"}
 EMPLOYMENT_TYPES = {
     "Hire (W2)",
     "W2 through Staffing Company",
@@ -251,8 +250,6 @@ def load_proxy_company(path_value: str | None) -> dict | None:
 def validate_experience_arrangement(
     employment_type: str | None, work_mode: str | None, proxy_company: dict | None
 ) -> None:
-    if work_mode and work_mode not in WORK_MODES:
-        raise ValueError(f"work_mode must be one of: {', '.join(sorted(WORK_MODES))}.")
     if employment_type and employment_type not in EMPLOYMENT_TYPES:
         raise ValueError(
             f"employment_type must be one of: {', '.join(sorted(EMPLOYMENT_TYPES))}."
@@ -504,7 +501,7 @@ def parse_args() -> argparse.Namespace:
     exp.add_argument("--company", required=True)
     exp.add_argument("--title", required=True)
     exp.add_argument("--employment-type", choices=sorted(EMPLOYMENT_TYPES))
-    exp.add_argument("--work-mode", choices=sorted(WORK_MODES))
+    exp.add_argument("--work-mode", help="Free-form work arrangement label, such as full-time or hybrid.")
     exp.add_argument(
         "--proxy-company-file",
         help="Path to a JSON object describing the staffing company.",

@@ -63,8 +63,8 @@ After bootstrap, run the remaining commands from the workspace root so generated
 
 ## Experience arrangements
 
-Experience records use `work_mode` for working-hours format (`full-time` or
-`part-time`) and `employment_type` for the legal engagement relationship:
+Experience records use a free-form `work_mode` label (for example, `full-time`,
+`hybrid`, or `project-based`) and `employment_type` for the legal engagement relationship:
 
 - `Hire (W2)`
 - `W2 through Staffing Company`

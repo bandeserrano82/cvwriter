@@ -11,7 +11,6 @@ CV_DATA_DIR = ROOT / "cv-data"
 JOB_TARGETS_DIR = ROOT / "job-targets"
 GENERATED_CVS_DIR = ROOT / "generated-cvs"
 REPO_ANALYSIS_DIR = ROOT / "repo-analysis-results"
-WORK_MODES = {"full-time", "part-time"}
 EMPLOYMENT_TYPES = {
     "Hire (W2)",
     "W2 through Staffing Company",
@@ -164,8 +163,6 @@ def validate_item(path: Path, kind: str) -> list[str]:
         work_mode = payload.get("work_mode", "")
         if isinstance(employment_type, str) and employment_type and employment_type not in EMPLOYMENT_TYPES:
             errors.append(f"{path.name}.employment_type is not a supported employment relationship.")
-        if isinstance(work_mode, str) and work_mode and work_mode not in WORK_MODES:
-            errors.append(f"{path.name}.work_mode must be full-time or part-time.")
         validate_proxy_company(payload, path, errors)
 
     ensure_list_of_strings(payload.get("manual_skills", []), f"{path.name}.manual_skills", errors)
