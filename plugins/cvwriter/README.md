@@ -66,13 +66,14 @@ After bootstrap, run the remaining commands from the workspace root so generated
 Experience records use `work_mode` for working-hours format (`full-time` or
 `part-time`) and `employment_type` for the legal engagement relationship:
 
-- `w2-employee`
-- `w2-staffing-company`
-- `independent-contractor-1099-nec`
-- `contractor-through-own-business`
+- `Hire (W2)`
+- `W2 through Staffing Company`
+- `Contract (1099)`
+- `Hire`
+- `Contract`
 
-`proxy_company` is `null` for direct engagements. For staffing-company and
-own-business relationships, it is an object containing the intermediary's
+`proxy_company` is `null` for direct engagements. For W2 through staffing-company
+relationships, it is an object containing the intermediary's
 name, website, address, phone, email, and a nested `contact_person` record
 with their name, title, department, email, phone, and LinkedIn URL. This
 information remains in the workspace payload and is excluded from generated

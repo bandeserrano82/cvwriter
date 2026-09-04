@@ -13,14 +13,14 @@ GENERATED_CVS_DIR = ROOT / "generated-cvs"
 REPO_ANALYSIS_DIR = ROOT / "repo-analysis-results"
 WORK_MODES = {"full-time", "part-time"}
 EMPLOYMENT_TYPES = {
-    "w2-employee",
-    "w2-staffing-company",
-    "independent-contractor-1099-nec",
-    "contractor-through-own-business",
+    "Hire (W2)",
+    "W2 through Staffing Company",
+    "Contract (1099)",
+    "Hire",
+    "Contract",
 }
 PROXY_REQUIRED_EMPLOYMENT_TYPES = {
-    "w2-staffing-company",
-    "contractor-through-own-business",
+    "W2 through Staffing Company",
 }
 PROXY_COMPANY_FIELDS = {"name", "website", "phone", "email"}
 PROXY_ADDRESS_FIELDS = {"line1", "line2", "city", "state", "postal_code", "country"}
@@ -74,7 +74,7 @@ def validate_proxy_company(payload: dict, path: Path, errors: list[str]) -> None
         errors.append(f"{path.name}.proxy_company must be an object when present.")
         return
     if not isinstance(employment_type, str) or employment_type not in PROXY_REQUIRED_EMPLOYMENT_TYPES:
-        errors.append(f"{path.name}.proxy_company is only allowed for staffing-company or own-business arrangements.")
+        errors.append(f"{path.name}.proxy_company is only allowed for W2 through Staffing Company arrangements.")
 
     name = proxy_company.get("name")
     if not isinstance(name, str) or not name.strip():

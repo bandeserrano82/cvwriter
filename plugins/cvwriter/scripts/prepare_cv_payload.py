@@ -16,10 +16,11 @@ JOB_TARGETS_DIR = ROOT / "job-targets"
 GENERATED_CVS_DIR = ROOT / "generated-cvs"
 REPO_ANALYSIS_DIR = ROOT / "repo-analysis-results"
 EMPLOYMENT_TYPE_LABELS = {
-    "independent-contractor-1099-nec": "Independent Contractor",
-    "contractor-through-own-business": "Contractor",
-    "w2-employee": "W2",
-    "w2-staffing-company": "W2 via Staffing Company",
+    "Hire (W2)": "Hire (W2)",
+    "W2 through Staffing Company": "W2 through Staffing Company",
+    "Contract (1099)": "Contract (1099)",
+    "Hire": "Hire",
+    "Contract": "Contract",
 }
 
 
